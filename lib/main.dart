@@ -9,25 +9,24 @@ void main() {
         backgroundColor: Colors.red,
         appBar: AppBar(
           backgroundColor: Colors.red,
-          title: Center(
-            child: Text('Dicee'),
+          title: const Center(
+            child: Text('Dice'),
           ),
         ),
-        body: myApp(),
+        body: const MyApp(),
       ),
     ),
   );
 }
 
-class myApp extends StatefulWidget {
-  const myApp({Key? key}) : super(key: key);
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
-  _myAppState createState() => _myAppState();
+  _MyAppState createState() => _MyAppState();
 }
 
-class _myAppState extends State<myApp> {
-  @override
+class _MyAppState extends State<MyApp> {
   int fstDice = 1;
   int scdDice = 1;
 
@@ -36,6 +35,7 @@ class _myAppState extends State<myApp> {
     scdDice = Random().nextInt(6) + 1;
   }
 
+  @override
   Widget build(BuildContext context) {
     return Center(
       child: Row(
